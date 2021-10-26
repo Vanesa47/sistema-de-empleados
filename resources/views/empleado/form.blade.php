@@ -16,7 +16,6 @@
 <input type="text" name="Correo" id="Correo">
 </br>
 
-<br>
 <label for="Foto">Foto</label>
 <input type="file" name="Foto" id="Foto">
 </br>
