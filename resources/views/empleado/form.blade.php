@@ -1,5 +1,5 @@
 
-<hr>
+
 <label for="Nombre">Nombre</label>
 <input type="text" name="Nombre" id="Nombre">
 </br>
