@@ -1,21 +1,23 @@
 <label for="Nombre">Nombre</label>
-<input type="text" name="Nombre" value="{{$empleado->Nombre}}" id="Nombre">
+<input type="text" name="Nombre" value="{{isset($empleado->Nombre)?$empleado->Nombre:''}}" id="Nombre">
 </br>
 
 <label for="PrimerApellido">PrimerApellido</label>
-<input type="text" name="PrimerApellido" value="{{$empleado->PrimerApellido}}" id="PrimerApellido">
+<input type="text" name="PrimerApellido" value="{{isset($empleado->PrimerApellido)?$empleado->PrimerApellido:''}}" id="PrimerApellido">
 </br>
 
 <label for="SegundoApellido">SegundoApellido</label>
-<input type="text" name="SegundoApellido" value="{{$empleado->SegundoApellido}}" id="SegundoApellido">
+<input type="text" name="SegundoApellido" value="{{isset($empleado->SegundoApellido)?$empleado->SegundoApellido:''}}" id="SegundoApellido">
 </br>
 
 <label for="Correo">Correo</label>
-<input type="text" name="Correo" value="{{$empleado->Correo}}" id="Correo">
+<input type="text" name="Correo" value="{{isset($empleado->Correo)?$empleado->Correo:''}}" id="Correo">
 </br>
 
 <label for="Foto">Foto</label>
-{{$empleado->Foto}}
+@if (isset($empleado->Foto))
+<img src="{{asset('storage').'/'.$empleado->Foto}}" width="100" alt=""> 
+@endif
 <input type="file" name="Foto" value="" id="Foto">
 </br>
 
