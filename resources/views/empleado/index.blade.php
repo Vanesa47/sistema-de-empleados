@@ -1,4 +1,8 @@
-mostrar la lista de empleados
+@extends('layouts.app')
+@section('content')
+<div class="container">
+
+
 @if(Session::has('mensaje'))
 {{Session::get('mensaje')}}
 @endif
@@ -45,3 +49,5 @@ mostrar la lista de empleados
         @endforeach
     </tbody>
 </table>
+</div>
+@endsection
