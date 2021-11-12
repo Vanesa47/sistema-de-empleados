@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmpleadoController;
+//use App\Http\Controllers\HomeController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +17,8 @@ use App\Http\Controllers\EmpleadoController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    return view('auth.login');
 });
 
 Route::get('/empleado', function () {
@@ -26,4 +30,8 @@ Route::get('/empleado', function () {
 */
 //Route::get('/empleado/create',[EmpleadoController::class,'create']);
 // Acceder a todas las URL De la clase empleado
-Route::resource('empleado', EmpleadoController::class);
+Route::resource('empleado', 'EmpleadoController');
+Auth::routes();
+Route::get('/home',[App\Http\Controllers\HomeController::class,'index'])->name('home');
+
+
